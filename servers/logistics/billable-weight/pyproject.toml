@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vic-billable-weight-mcp"
+version = "1.0.0"
+description = "MCP server for international shipping: billable weight for UPS/FedEx/DHL, air cargo, sea LCL and road, surcharge checks, carrier adjustment audits and carton sizing."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Vic" }]
+keywords = ["mcp", "model-context-protocol", "logistics", "chargeable-weight", "dimensional-weight", "volumetric-weight", "freight", "express"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business",
+  "Intended Audience :: Developers",
+]
+dependencies = ["mcp>=2.3,<3", "pydantic>=2.7"]
+
+[project.urls]
+Homepage = "https://github.com/voidgazer009/vic-mcp-servers"
+Source = "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/logistics/billable-weight"
+
+[project.scripts]
+vic-billable-weight-mcp = "vic_billable_weight.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vic_billable_weight"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

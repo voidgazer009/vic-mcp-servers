@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.voidgazer009/vic-billable-weight",
+  "title": "Vic Billable Weight",
+  "description": "Billable weight for UPS/FedEx/DHL, air, sea LCL; surcharge checks, adjustment audits, box sizing.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/voidgazer009/vic-mcp-servers",
+    "source": "github",
+    "subfolder": "servers/logistics/billable-weight"
+  },
+  "websiteUrl": "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/logistics/billable-weight",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "vic-billable-weight-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

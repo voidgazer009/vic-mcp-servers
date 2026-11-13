@@ -184,8 +184,17 @@ def main() -> int:
         desc_ok = sum(1 for t in tools if t.description and len(t.description) >= 60)
         rep.score("B3", "Tool descriptions >= 60 chars", round(4 * desc_ok / n, 2), 4)
         params_total = params_ok = constrained = 0
+        undocumented_nested = []
         for t in tools:
-            for _, spec in t.input_schema.get("properties", {}).items():
+            # Nested input models ($defs) count too: a list[Model] parameter must document every field (since v1.1)
+            nested = []
+            for model_name, model in (t.input_schema.get("$defs") or t.input_schema.get("definitions") or {}).items():
+                for fname, fspec in (model.get("properties") or {}).items():
+                    nested.append((f"{t.name}.{model_name}.{fname}", fspec))
+            for qual, fspec in nested:
+                if not fspec.get("description"):
+                    undocumented_nested.append(qual)
+            for _, spec in list(t.input_schema.get("properties", {}).items()) + [(q, f) for q, f in nested]:
                 if spec.get("type") == "boolean":  # needs a description, cannot be range-constrained
                     params_total += 1
                     params_ok += bool(spec.get("description"))
@@ -197,8 +206,9 @@ def main() -> int:
                 constrained += any(k in flat for k in ("minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum",
                                                        "minLength", "maxLength", "enum", "minItems", "maxItems", "const"))
         frac = (params_ok / params_total * 0.6 + constrained / params_total * 0.4) if params_total else 1
-        rep.score("B4", "Params described and constrained", round(5 * frac, 2), 5,
-                  f"{params_ok}/{params_total} described, {constrained}/{params_total} constrained")
+        rep.score("B4", "Params (incl. nested model fields) described and constrained", round(5 * frac, 2), 5,
+                  f"{params_ok}/{params_total} described, {constrained}/{params_total} constrained"
+                  + (f"; undocumented nested: {', '.join(undocumented_nested[:5])}" if undocumented_nested else ""))
         rep.score("B5", "outputSchema on every tool", round(4 * sum(1 for t in tools if t.output_schema) / n, 2), 4)
         ann_ok = sum(1 for t in tools if t.annotations and None not in (
             t.annotations.read_only_hint, t.annotations.destructive_hint, t.annotations.idempotent_hint, t.annotations.open_world_hint))

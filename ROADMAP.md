@@ -15,14 +15,13 @@
 - trade-show-planner · 展会 ROI 与跟进节奏
 
 ## 国际物流 International logistics (`servers/logistics/`)
-- freight-calculator · 空运/海运/快递计费重、体积重、W/M 计算与比价
+- ✅ billable-weight · 计费重（UPS/FedEx/DHL/空运/拼箱/公路）、附加费预检、重量调整申诉、纸箱优化、报价比价（合并原 freight-calculator 与 dim-weight-optimizer）
 - shipment-tracker · 集装箱号/提单号/空运单号格式校验与追踪入口
 - customs-docs · 报关单据清单：按国家和品类列出需要的文件
 - demurrage-detention · 滞港费/滞箱费计算与免费期提醒
 - dangerous-goods · 危险品（锂电池等）运输规则初判
 - port-lookup · 港口代码 UN/LOCODE 查询
 - transit-time · 主要航线时效与转运风险
-- dim-weight-optimizer · 包装尺寸优化降低体积重
 
 ## AI 一人公司 One-person company (`servers/one-person-company/`)
 - invoice-tracker · 开票、收款、逾期提醒

@@ -1,4 +1,4 @@
-# Vic MCP 审核标准 · Review Standard v1.0
+# Vic MCP 审核标准 · Review Standard v1.1
 
 每个 MCP Server 上架前必须通过这套审核。审核分两层：**一票否决的硬门槛**，加上 **100 分制质量评分**。硬门槛全部通过、且评分 ≥ 85 分才能发布；任何一项硬门槛不过，直接打回重做。
 
@@ -40,7 +40,7 @@ Every server in this repo must pass this review before release: all **hard gates
 | B1 使用官方 SDK 当前大版本（Python `mcp>=2` / TS SDK 对应 2026-07-28 修订版） | 3 |
 | B2 Server 声明 `name`、`title`、`version`、`description`，并提供 `instructions` 告诉模型何时、如何使用 | 3 |
 | B3 每个工具有清楚的 `description`（≥ 60 字符，说明做什么、何时用） | 4 |
-| B4 每个输入参数都有 `description`，并用约束（范围、长度、枚举）防止乱填 | 5 |
+| B4 每个输入参数（含 list[Model] 等嵌套模型的每个字段）都有 `description`，并用约束（范围、长度、枚举）防止乱填 | 5 |
 | B5 每个工具声明 `outputSchema`，返回结构化结果（structuredContent） | 4 |
 | B6 每个工具声明 annotations：`readOnlyHint`、`destructiveHint`、`idempotentHint`、`openWorldHint` | 4 |
 | B7 支持 stdio，且可选 Streamable HTTP（无状态，可水平扩展） | 2 |
@@ -95,3 +95,10 @@ Every server in this repo must pass this review before release: all **hard gates
 | 85 to 94 | ✅ 通过，可发布 |
 | 70 to 84 | 🔧 需修改，不发布 |
 | < 70 或任一硬门槛未过 | ❌ 打回重做 |
+
+## 五、标准变更记录 · Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.0 | 2026-11-12 | 首版 |
+| v1.1 | 2026-11-13 | 收紧 B4：`audit.py` 现在也检查嵌套输入模型（`$defs`）里每个字段的描述和约束，之前只看顶层参数（billable-weight 人工审核时发现的盲区） |

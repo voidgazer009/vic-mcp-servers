@@ -11,6 +11,7 @@
 | 方向 | Server | 解决什么 | 工具 | 审核分 | 版本 |
 |---|---|---|---|---|---|
 | 外贸 | [export-quote](servers/foreign-trade/export-quote) | 一次算对 EXW/FOB/CFR/CIF/DDP 报价，装柜最省钱组合，汇率，贸易术语避坑 | 5 | 🏆 96 | 1.0.0 |
+| 国际物流 | [billable-weight](servers/logistics/billable-weight) | 算准 UPS/FedEx/DHL/空运/拼箱计费重，订舱前查附加费，核查承运商重量调整并写申诉，纸箱缩多少最省 | 5 | 🏆 95 | 1.0.0 |
 
 更多主题见 [ROADMAP.md](ROADMAP.md)，四个方向轮流更新，一个打磨完再做下一个。
 
