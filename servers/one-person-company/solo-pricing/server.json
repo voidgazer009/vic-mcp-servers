@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.voidgazer009/vic-solo-pricing",
+  "title": "Vic Solo Pricing",
+  "description": "Hourly rate, fixed-fee quotes, fee gross-up, discount impact for freelancers and solo founders.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/voidgazer009/vic-mcp-servers",
+    "source": "github",
+    "subfolder": "servers/one-person-company/solo-pricing"
+  },
+  "websiteUrl": "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/one-person-company/solo-pricing",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "vic-solo-pricing-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

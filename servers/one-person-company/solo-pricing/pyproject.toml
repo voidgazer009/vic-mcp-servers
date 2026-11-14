@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vic-solo-pricing-mcp"
+version = "1.0.0"
+description = "MCP server for solo founders and freelancers: hourly rate, fixed-price quotes, fee gross-up, discount impact, real hourly rate."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Vic" }]
+keywords = ["mcp", "model-context-protocol", "freelance", "pricing", "one-person-company", "hourly-rate"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Office/Business :: Financial", "Intended Audience :: Developers"]
+dependencies = ["mcp>=2.3,<3", "pydantic>=2.7"]
+
+[project.urls]
+Homepage = "https://github.com/voidgazer009/vic-mcp-servers"
+Source = "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/one-person-company/solo-pricing"
+
+[project.scripts]
+vic-solo-pricing-mcp = "vic_solo_pricing.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vic_solo_pricing"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

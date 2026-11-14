@@ -25,7 +25,7 @@
 
 ## AI 一人公司 One-person company (`servers/one-person-company/`)
 - invoice-tracker · 开票、收款、逾期提醒
-- pricing-calculator · 服务/产品定价：成本、时薪、目标收入倒推
+- ✅ solo-pricing · 时薪倒推、固定价报价、手续费倒推、打折影响、真实时薪（原 pricing-calculator）
 - cashflow-forecast · 13 周现金流预测
 - client-crm-lite · 轻量客户管理（本地 SQLite）
 - tax-calendar · 各国个体户/小公司报税日历
