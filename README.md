@@ -13,6 +13,7 @@
 | 外贸 | [export-quote](servers/foreign-trade/export-quote) | 一次算对 EXW/FOB/CFR/CIF/DDP 报价，装柜最省钱组合，汇率，贸易术语避坑 | 5 | 🏆 96 | 1.0.0 |
 | 国际物流 | [billable-weight](servers/logistics/billable-weight) | 算准 UPS/FedEx/DHL/空运/拼箱计费重，订舱前查附加费，核查承运商重量调整并写申诉，纸箱缩多少最省 | 5 | 🏆 95 | 1.0.0 |
 | AI 一人公司 | [solo-pricing](servers/one-person-company/solo-pricing) | 从想拿的收入倒推最低时薪，固定价报价含缓冲和改稿，手续费倒推，打折要多卖多少，单子真实时薪 | 5 | 🏆 96 | 1.0.0 |
+| 全球自媒体 | [utm-builder](servers/social-media/utm-builder) | UTM 链接生成、已有链接检查、GA4 渠道预测、多平台批量生成 | 4 | 🏆 96 | 1.0.0 |
 
 更多主题见 [ROADMAP.md](ROADMAP.md)，四个方向轮流更新，一个打磨完再做下一个。
 

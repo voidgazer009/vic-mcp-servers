@@ -39,6 +39,6 @@
 - content-repurpose · 一稿多平台改写规则（字数、格式、标签）
 - caption-linter · 各平台文案限制检查（字数、链接、敏感词）
 - creator-rate-card · 达人报价计算（粉丝、互动率、平台系数）
-- utm-builder · UTM 链接生成与归因命名规范
+- ✅ utm-builder · UTM 链接生成、检查、GA4 渠道预测、多平台批量
 - video-spec-checker · 各平台视频尺寸、时长、码率要求
 - analytics-digest · 多平台数据周报

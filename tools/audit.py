@@ -217,7 +217,7 @@ def main() -> int:
     rep.score("B7", "stdio + stateless Streamable HTTP", 2 if ("streamable-http" in src_txt and "stateless_http=True" in src_txt) else 1, 2)
 
     # ---------------- C. automatic parts
-    has_timeout = ("timeout" in src_txt) if re.search(r"httpx|requests|urllib|aiohttp|fetch\(", src_txt) else True
+    has_timeout = ("timeout" in src_txt) if re.search(r"httpx|requests|urllib\.request|urlopen|http\.client|aiohttp|websockets|socket\.|fetch\(", src_txt) else True
     rep.score("C3", "Network calls have timeouts", 4 if has_timeout else 0, 4)
     rep.score("C4", "Outputs carry warnings for the user", 5 if re.search(r"warning", src_txt) else 0, 5)
 
