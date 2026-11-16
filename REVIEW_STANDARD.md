@@ -1,4 +1,4 @@
-# Vic MCP 审核标准 · Review Standard v1.2
+# Vic MCP 审核标准 · Review Standard v1.3
 
 每个 MCP Server 上架前必须通过这套审核。审核分两层：**一票否决的硬门槛**，加上 **100 分制质量评分**。硬门槛全部通过、且评分 ≥ 85 分才能发布；任何一项硬门槛不过，直接打回重做。
 
@@ -103,3 +103,4 @@ Every server in this repo must pass this review before release: all **hard gates
 | v1.0 | 2026-11-12 | 首版 |
 | v1.1 | 2026-11-13 | 收紧 B4：`audit.py` 现在也检查嵌套输入模型（`$defs`）里每个字段的描述和约束，之前只看顶层参数（billable-weight 人工审核时发现的盲区） |
 | v1.2 | 2026-11-15 | 修正 C3：只在出现真实联网库（urllib.request、urlopen、http.client、aiohttp、websockets、socket 等）时才要求超时，`urllib.parse` 不再误判（utm-builder 发现） |
+| v1.3 | 2026-11-16 | 修正 C3：只在真正 import/调用联网库时才要求超时，不再被变量名或文字里的 "requests" 误判（payment-terms 发现；同时堵住 `import requests`、urllib3、pycurl 的写法）。 |

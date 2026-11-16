@@ -8,7 +8,7 @@
 - buyer-vetting · 买家背调：域名年龄、公司注册、邮箱真伪、诈骗特征
 - proforma-invoice · 生成形式发票 / 报价单 PDF
 - lc-checker · 信用证条款审单，找软条款和不符点
-- payment-terms-risk · T/T、L/C、D/P、O/A 风险评估与建议
+- ✅ payment-terms · 收款方式比较、推荐、条款/信用证软条款筛查（原 payment-terms-risk + lc-checker 的文本审查部分）
 - sample-policy · 样品费、运费、抵扣规则计算
 - inquiry-triage · 询盘打分：真买家 vs 同行/骗子/学生
 - hs-code-helper · HS 编码初判与各国税率查询入口
