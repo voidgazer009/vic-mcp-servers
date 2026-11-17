@@ -126,8 +126,10 @@ def main() -> int:
     tail = proc.stdout.strip().splitlines()[-1] if proc.stdout.strip() else proc.stderr[-200:]
     has_proto_test = any("from mcp import Client" in p.read_text() for p in (server_dir / "tests").glob("test_*.py")) \
         if (server_dir / "tests").exists() else False
-    rep.gate("G4", "pytest passes, incl. a protocol-level Client test", proc.returncode == 0 and has_proto_test,
-             tail + ("" if has_proto_test else " | no test uses mcp.Client"))
+    vacuous = [f.name for f in (server_dir / "tests").glob("test_*.py") if re.search(r"\bassert\b[^\n]*\bor True\b|\bassert True\b", f.read_text())] \
+        if (server_dir / "tests").exists() else []
+    rep.gate("G4", "pytest passes, incl. a protocol-level Client test, no vacuous asserts", proc.returncode == 0 and has_proto_test and not vacuous,
+             tail + ("" if has_proto_test else " | no test uses mcp.Client") + (f" | vacuous assert (or True / assert True) in {', '.join(vacuous)}" if vacuous else ""))
 
     files = scan_files(server_dir)
     # G5 secrets

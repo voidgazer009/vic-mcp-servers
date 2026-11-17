@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.voidgazer009/vic-transport-ids",
+  "title": "Vic Transport IDs",
+  "description": "Validate container (ISO 6346) and AWB check digits, decode container size/type codes.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/voidgazer009/vic-mcp-servers",
+    "source": "github",
+    "subfolder": "servers/logistics/transport-ids"
+  },
+  "websiteUrl": "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/logistics/transport-ids",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "vic-transport-ids-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

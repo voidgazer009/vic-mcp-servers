@@ -16,7 +16,7 @@
 
 ## 国际物流 International logistics (`servers/logistics/`)
 - ✅ billable-weight · 计费重（UPS/FedEx/DHL/空运/拼箱/公路）、附加费预检、重量调整申诉、纸箱优化、报价比价（合并原 freight-calculator 与 dim-weight-optimizer）
-- shipment-tracker · 集装箱号/提单号/空运单号格式校验与追踪入口
+- ✅ transport-ids · 集装箱号/空运单号校验、箱型解码（shipment-tracker 的离线部分；真实追踪与提单号待做）
 - customs-docs · 报关单据清单：按国家和品类列出需要的文件
 - demurrage-detention · 滞港费/滞箱费计算与免费期提醒
 - dangerous-goods · 危险品（锂电池等）运输规则初判
