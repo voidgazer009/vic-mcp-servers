@@ -24,7 +24,7 @@
 - transit-time · 主要航线时效与转运风险
 
 ## AI 一人公司 One-person company (`servers/one-person-company/`)
-- invoice-tracker · 开票、收款、逾期提醒
+- ✅ invoice-aging · 到期日、应收账龄、逾期利息、催款草稿（无状态版 invoice-tracker；存储版留待后续）
 - ✅ solo-pricing · 时薪倒推、固定价报价、手续费倒推、打折影响、真实时薪（原 pricing-calculator）
 - cashflow-forecast · 13 周现金流预测
 - client-crm-lite · 轻量客户管理（本地 SQLite）

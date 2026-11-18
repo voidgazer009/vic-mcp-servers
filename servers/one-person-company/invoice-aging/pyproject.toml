@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vic-invoice-aging-mcp"
+version = "1.0.0"
+description = "MCP server for freelancers: invoice due dates, receivables aging, EU/UK late-payment interest, reminder drafts."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Vic" }]
+keywords = ["mcp", "model-context-protocol", "freelance", "invoicing", "one-person-company", "late-payment"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Office/Business :: Financial", "Intended Audience :: Developers"]
+dependencies = ["mcp>=2.3,<3", "pydantic>=2.7"]
+
+[project.urls]
+Homepage = "https://github.com/voidgazer009/vic-mcp-servers"
+Source = "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/one-person-company/invoice-aging"
+
+[project.scripts]
+vic-invoice-aging-mcp = "vic_invoice_aging.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vic_invoice_aging"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
