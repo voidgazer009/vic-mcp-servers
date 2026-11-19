@@ -17,6 +17,7 @@
 | AI 一人公司 | [solo-pricing](servers/one-person-company/solo-pricing) | 从想拿的收入倒推最低时薪，固定价报价含缓冲和改稿，手续费倒推，打折要多卖多少，单子真实时薪 | 5 | 🏆 96 | 1.0.0 |
 | AI 一人公司 | [invoice-aging](servers/one-person-company/invoice-aging) | 到期日、应收账龄、欧盟/英国逾期利息和固定追款费、分级催款邮件草稿 | 4 | 🏆 95 | 1.0.0 |
 | 全球自媒体 | [utm-builder](servers/social-media/utm-builder) | UTM 链接生成、已有链接检查、GA4 渠道预测、多平台批量生成 | 4 | 🏆 96 | 1.0.0 |
+| 全球自媒体 | [creator-quote](servers/social-media/creator-quote) | 达人报价审核：互动率中位数、有效 CPM/CPE（含授权/排他）、最高可接受报价、回本单量、还价草稿 | 4 | 🏆 94 | 1.0.0 |
 
 更多主题见 [ROADMAP.md](ROADMAP.md)，四个方向轮流更新，一个打磨完再做下一个。
 

@@ -38,7 +38,7 @@
 - hashtag-research · 话题标签分组与长度/数量规则校验
 - content-repurpose · 一稿多平台改写规则（字数、格式、标签）
 - caption-linter · 各平台文案限制检查（字数、链接、敏感词）
-- creator-rate-card · 达人报价计算（粉丝、互动率、平台系数）
+- ✅ creator-quote · 达人报价审核（CPM/CPE、授权费、回本；取代 creator-rate-card）
 - ✅ utm-builder · UTM 链接生成、检查、GA4 渠道预测、多平台批量
 - video-spec-checker · 各平台视频尺寸、时长、码率要求
 - analytics-digest · 多平台数据周报
