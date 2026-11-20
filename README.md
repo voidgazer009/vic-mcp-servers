@@ -12,6 +12,7 @@
 |---|---|---|---|---|---|
 | 外贸 | [export-quote](servers/foreign-trade/export-quote) | 一次算对 EXW/FOB/CFR/CIF/DDP 报价，装柜最省钱组合，汇率，贸易术语避坑 | 5 | 🏆 96 | 1.0.0 |
 | 外贸 | [payment-terms](servers/foreign-trade/payment-terms) | 收款方式比较（T/T、L/C、D/P、D/A、O/A）、推荐、合同和信用证软条款筛查 | 4 | 🏆 95 | 1.0.0 |
+| 外贸 | [sample-policy](servers/foreign-trade/sample-policy) | 样品请求分级、四档报价、首单抵扣、ROI、条款草稿 | 5 | 🏆 94 | 1.0.0 |
 | 国际物流 | [billable-weight](servers/logistics/billable-weight) | 算准 UPS/FedEx/DHL/空运/拼箱计费重，订舱前查附加费，核查承运商重量调整并写申诉，纸箱缩多少最省 | 5 | 🏆 95 | 1.0.0 |
 | 国际物流 | [transport-ids](servers/logistics/transport-ids) | 集装箱号（ISO 6346）与空运单号校验、箱型代码解码、文本提取 | 4 | 🏆 95 | 1.0.0 |
 | AI 一人公司 | [solo-pricing](servers/one-person-company/solo-pricing) | 从想拿的收入倒推最低时薪，固定价报价含缓冲和改稿，手续费倒推，打折要多卖多少，单子真实时薪 | 5 | 🏆 96 | 1.0.0 |

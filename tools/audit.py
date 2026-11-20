@@ -168,7 +168,17 @@ def main() -> int:
             schema_ok = True
         except Exception as e:  # noqa: BLE001
             schema_msg = f"{type(e).__name__}: {str(e)[:160]}"
-    rep.gate("G9", "LICENSE + pyproject + server.json valid vs official schema", lic and pyproject.exists() and schema_ok,
+    # since v1.5: classifiers must be real PyPI trove classifiers, otherwise `pip install -e` fails (sample-policy)
+    if pyproject.exists() and not schema_msg:
+        try:
+            from trove_classifiers import classifiers as _valid
+
+            _bad = [c for c in tomllib.loads(pyproject.read_text()).get("project", {}).get("classifiers", []) if c not in _valid]
+            if _bad:
+                schema_ok, schema_msg = False, f"unknown PyPI classifier(s): {_bad}"
+        except ImportError:
+            schema_ok, schema_msg = False, "pip install trove-classifiers into the audit env"
+    rep.gate("G9", "LICENSE + pyproject (valid classifiers) + server.json valid vs official schema", lic and pyproject.exists() and schema_ok,
              schema_msg or ("" if lic else "no LICENSE"))
 
     # ---------------- B. spec compliance (25)
