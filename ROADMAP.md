@@ -18,7 +18,7 @@
 - ✅ billable-weight · 计费重（UPS/FedEx/DHL/空运/拼箱/公路）、附加费预检、重量调整申诉、纸箱优化、报价比价（合并原 freight-calculator 与 dim-weight-optimizer）
 - ✅ transport-ids · 集装箱号/空运单号校验、箱型解码（shipment-tracker 的离线部分；真实追踪与提单号待做）
 - customs-docs · 报关单据清单：按国家和品类列出需要的文件
-- demurrage-detention · 滞港费/滞箱费计算与免费期提醒
+- ✅ demurrage-detention · 最后免费日、阶梯滞港/滞箱费、提柜日期比较、账单核对与更正申请草稿
 - dangerous-goods · 危险品（锂电池等）运输规则初判
 - port-lookup · 港口代码 UN/LOCODE 查询
 - transit-time · 主要航线时效与转运风险

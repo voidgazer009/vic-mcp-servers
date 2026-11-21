@@ -15,6 +15,7 @@
 | 外贸 | [sample-policy](servers/foreign-trade/sample-policy) | 样品请求分级、四档报价、首单抵扣、ROI、条款草稿 | 5 | 🏆 94 | 1.0.0 |
 | 国际物流 | [billable-weight](servers/logistics/billable-weight) | 算准 UPS/FedEx/DHL/空运/拼箱计费重，订舱前查附加费，核查承运商重量调整并写申诉，纸箱缩多少最省 | 5 | 🏆 95 | 1.0.0 |
 | 国际物流 | [transport-ids](servers/logistics/transport-ids) | 集装箱号（ISO 6346）与空运单号校验、箱型代码解码、文本提取 | 4 | 🏆 95 | 1.0.0 |
+| 国际物流 | [demurrage-detention](servers/logistics/demurrage-detention) | 滞港费/滞箱费：最后免费日、阶梯计费、提柜日期比较、账单核对 | 4 | 🏆 95 | 1.0.0 |
 | AI 一人公司 | [solo-pricing](servers/one-person-company/solo-pricing) | 从想拿的收入倒推最低时薪，固定价报价含缓冲和改稿，手续费倒推，打折要多卖多少，单子真实时薪 | 5 | 🏆 96 | 1.0.0 |
 | AI 一人公司 | [invoice-aging](servers/one-person-company/invoice-aging) | 到期日、应收账龄、欧盟/英国逾期利息和固定追款费、分级催款邮件草稿 | 4 | 🏆 95 | 1.0.0 |
 | 全球自媒体 | [utm-builder](servers/social-media/utm-builder) | UTM 链接生成、已有链接检查、GA4 渠道预测、多平台批量生成 | 4 | 🏆 96 | 1.0.0 |
