@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vic-cashflow-forecast-mcp"
+version = "1.0.0"
+description = "MCP server for freelancers: 13-week cash-flow forecast, runway and late-payment stress test."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Vic" }]
+keywords = ["mcp", "model-context-protocol", "freelance", "cash-flow", "one-person-company", "forecast"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Office/Business :: Financial", "Intended Audience :: Developers"]
+dependencies = ["mcp>=2.3,<3", "pydantic>=2.7"]
+
+[project.urls]
+Homepage = "https://github.com/voidgazer009/vic-mcp-servers"
+Source = "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/one-person-company/cashflow-forecast"
+
+[project.scripts]
+vic-cashflow-forecast-mcp = "vic_cashflow_forecast.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vic_cashflow_forecast"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -26,7 +26,7 @@
 ## AI 一人公司 One-person company (`servers/one-person-company/`)
 - ✅ invoice-aging · 到期日、应收账龄、逾期利息、催款草稿（无状态版 invoice-tracker；存储版留待后续）
 - ✅ solo-pricing · 时薪倒推、固定价报价、手续费倒推、打折影响、真实时薪（原 pricing-calculator）
-- cashflow-forecast · 13 周现金流预测
+- ✅ cashflow-forecast · 13 周现金流预测、跑道、晚付款压力测试
 - client-crm-lite · 轻量客户管理（本地 SQLite）
 - tax-calendar · 各国个体户/小公司报税日历
 - contract-checker · 合同风险条款提示
