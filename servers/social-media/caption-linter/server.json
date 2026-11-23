@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.voidgazer009/vic-caption-linter",
+  "title": "Vic Caption Linter",
+  "description": "Count and lint social posts per platform: X weighted, Bluesky, Instagram, YouTube. Offline.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/voidgazer009/vic-mcp-servers",
+    "source": "github",
+    "subfolder": "servers/social-media/caption-linter"
+  },
+  "websiteUrl": "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/social-media/caption-linter",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "vic-caption-linter-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

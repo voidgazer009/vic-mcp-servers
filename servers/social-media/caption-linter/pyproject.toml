@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vic-caption-linter-mcp"
+version = "1.0.0"
+description = "MCP server for social media teams: count and lint one post against each platform's real limits (X weighted, Bluesky graphemes, Threads, Mastodon, Instagram, YouTube bytes)."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Vic" }]
+keywords = ["mcp", "model-context-protocol", "social-media", "character-limit", "caption", "linter", "x", "instagram"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Internet :: WWW/HTTP", "Intended Audience :: Developers"]
+dependencies = ["mcp>=2.3,<3", "pydantic>=2.7"]
+
+[project.urls]
+Homepage = "https://github.com/voidgazer009/vic-mcp-servers"
+Source = "https://github.com/voidgazer009/vic-mcp-servers/tree/main/servers/social-media/caption-linter"
+
+[project.scripts]
+vic-caption-linter-mcp = "vic_caption_linter.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "anyio>=4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vic_caption_linter"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
